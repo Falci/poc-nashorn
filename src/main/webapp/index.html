@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>POC</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container">
+
+      <h2>Formulário com validação</h2>
+
+      <form class="form-horizontal" novalidate>
+
+          <div class="form-group">
+              <label for="name" class="control-label col-sm-2">Nome:</label>
+              <div class="col-sm-10">
+                  <input id="name" name="name" class="form-control" placeholder="Nome">
+              </div>
+          </div>
+
+          <div class="form-group">
+              <label for="email" class="control-label col-sm-2">Email:</label>
+              <div class="col-sm-10">
+                  <input id="email" name="email" type="email" class="form-control" placeholder="email@falci.me">
+              </div>
+          </div>
+
+          <div class="form-group">
+              <div class="col-sm-2 col-sm-offset-2">
+                  <input type="submit" class="btn btn-primary" value="Enviar" />
+              </div>
+              <div class="col-sm-8">
+                  <div class="checkbox">
+                      <label>
+                          <input type="checkbox" id="disableValidation" /> Desabilitar validação <em>client side</em>
+                      </label>
+                  </div>
+              </div>
+          </div>
+      </form>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="js/helpers.js"></script>
+    <script src="js/client-and-server.js"></script>
+    <script src="js/client.js"></script>
+
+  </body>
+</html>
