@@ -76,3 +76,12 @@ return invocable.getInterface(Validator.class);
 
 ##  Object type convertion
 The Javascript's array used in the validator's return is automatically transformed in a java.util.List. It means the service can use the Javascript arrays as a List, without additional code.
+
+```java
+List<String> errors = JsValidator.getValidator(data)
+    .getErrors(data); // javascript function
+
+if(!errors.isEmpty()){
+  throw new InvalidFormDataException(errors);
+}
+```
